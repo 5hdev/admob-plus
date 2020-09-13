@@ -32,9 +32,9 @@ public class BannerAd extends AdBase {
         plugin.cordova.getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                BannerAd bannerAd = (BannerAd) action.getAd();
+                final BannerAd bannerAd = (BannerAd) action.getAd();
                 if (bannerAd == null) {
-                    bannerAd = new BannerAd(
+                    final bannerAd = new BannerAd(
                         action.optId(),
                         action.getAdUnitID(),
                         action.getAdSize(),
